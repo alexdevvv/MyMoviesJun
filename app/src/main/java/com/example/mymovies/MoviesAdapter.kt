@@ -11,9 +11,11 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withC
 import com.bumptech.glide.request.RequestOptions
 import com.example.mymovies.data.model.Film
 
-class MoviesAdapter(private var listMovies: List<Film>,
+class MoviesAdapter(
                     private val context: Context,
                     private val listener: Listener): RecyclerView.Adapter<MoviesAdapter.MyViewHolder>() {
+
+    private  var listMovies: List<Film> = listOf()
 
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val moviewBanner: ImageView = itemView.findViewById(R.id.movie_poster_iv)
@@ -26,7 +28,7 @@ class MoviesAdapter(private var listMovies: List<Film>,
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        var film = listMovies!![position]
+        var film = listMovies[position]
         Glide
             .with(context)
             .load(film.posterUrl)
@@ -40,6 +42,11 @@ class MoviesAdapter(private var listMovies: List<Film>,
         }
     }
 
+
+    fun initAdapter(listMovies: List<Film>){
+        this.listMovies = listMovies
+        notifyDataSetChanged()
+    }
 
     override fun getItemCount(): Int {
        return listMovies.size

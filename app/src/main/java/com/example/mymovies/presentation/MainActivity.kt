@@ -1,4 +1,4 @@
-package com.example.mymovies
+package com.example.mymovies.presentation
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mymovies.MoviesAdapter
+import com.example.mymovies.R
 import com.example.mymovies.data.model.Film
 import com.example.mymovies.databinding.ActivityMainBinding
 import com.example.mymovies.vm.MyViewModel

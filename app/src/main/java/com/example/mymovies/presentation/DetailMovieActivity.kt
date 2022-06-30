@@ -1,4 +1,4 @@
-package com.example.mymovies
+package com.example.mymovies.presentation
 
 import android.os.Bundle
 import android.util.Log
@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import com.example.mymovies.TOKEN
 import com.example.mymovies.data.retrofit.ApiService
 import com.example.mymovies.data.retrofit.RetrofitHelper
 import com.example.mymovies.databinding.ActivityDetailMovieBinding

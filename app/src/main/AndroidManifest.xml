@@ -12,13 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyMovies">
         <activity
-            android:name=".FavoriteMoviesActivity"
+            android:name=".presentation.FavoriteMoviesActivity"
             android:exported="false" />
         <activity
             android:name=".DetailMovieActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

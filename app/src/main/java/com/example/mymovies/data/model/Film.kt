@@ -1,8 +1,9 @@
 package com.example.mymovies.data.model
 
+import androidx.room.Entity
 import com.google.gson.annotations.SerializedName
 
-
+@Entity
 data class Film(
     @SerializedName("filmId")
     val filmId: String,
